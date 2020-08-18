@@ -42,3 +42,14 @@ else
         echo "invalid Mobile No"
 fi
 
+#UC-5
+echo "enter your password: "
+read passwd
+testPasswd="[0-9a-zA-Z!@#$%^&*]{8,}"
+if [[ $passwd =~ $testPasswd ]]
+then
+        echo "password is valid"
+else
+        echo "invalid password!!!Password should be min 8 characters"
+fi
+
