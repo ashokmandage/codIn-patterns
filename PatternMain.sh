@@ -4,7 +4,7 @@ read usrname
 testFname="^[A-Z]{3,}"
 if [[ $usrname =~ $testFname ]]
 then
-echo "valid first name"
+	echo "valid first name"
 else
-echo "invalid first name"
+	echo "invalid first name"
 fi
