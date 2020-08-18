@@ -20,3 +20,14 @@ else
         echo "invalid last name"
 fi
 
+#UC-3
+echo "enter your email: "
+read email
+testEmail="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
+if [[ $email =~ $testEmail ]]
+then
+        echo "valid Email"
+else
+        echo "invalid Email"
+fi
+
