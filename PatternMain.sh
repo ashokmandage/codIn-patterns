@@ -63,3 +63,14 @@ then
 else
         echo "invalid password!!!Password should have atleast 1 upper case "
 fi
+
+#UC-7
+echo "enter your password: "
+read passwd
+#testPasswd="[0-9a-zA-Z!@#$%^&*](.*[A-Z].*)(.*[0-9].*){8,}"
+if [[ ${#passwd} -ge 8 && $passwd == *[[:upper:]]* && $passwd == *[0-9]* ]]
+then
+        echo "password is valid"
+else
+        echo "invalid password!!!Password should have atleast 1 numeric "
+fi
