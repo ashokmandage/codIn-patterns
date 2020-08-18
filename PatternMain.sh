@@ -74,3 +74,13 @@ then
 else
         echo "invalid password!!!Password should have atleast 1 numeric "
 fi
+
+#UC-8
+echo "enter your password: "
+read passwd
+if [[ ${#passwd} -ge 8 && $passwd == *[[:upper:]]* && $passwd == *[0-9]* && $passwd == *[@#%^-*+/]{1}* ]]
+then
+        echo "password is valid..satisfying all conditions"
+else
+        echo "invalid password!!!Password should have exactly 1 special char "
+fi
