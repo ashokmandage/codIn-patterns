@@ -31,3 +31,14 @@ else
         echo "invalid Email"
 fi
 
+#UC-4
+echo "enter your mobile no: "
+read mobile
+testMobile="^[0-9]{2}$|[ ][0-9]{10}$"
+if [[ $mobile =~ $testMobile ]]
+then
+        echo "Mobile No is in predefined format"
+else
+        echo "invalid Mobile No"
+fi
+
