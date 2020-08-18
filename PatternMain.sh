@@ -53,3 +53,13 @@ else
         echo "invalid password!!!Password should be min 8 characters"
 fi
 
+#UC-6
+echo "enter your password: "
+read passwd
+testPasswd="[0-9a-zA-Z!@#$%^&*](.*[A-Z].*){8,}"
+if [[ $passwd =~ $testPasswd ]]
+then
+        echo "password is valid"
+else
+        echo "invalid password!!!Password should have atleast 1 upper case "
+fi
